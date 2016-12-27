@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+  <id>87608</id>
+  <defaultcontrol>873008</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <define>#header.label:"Choose Current Program"</define>
+  <define>#header.hover:hover_trakt.png</define>
+  <controls>
+    <!-- BACKGROUND -->
+    <control>
+      <description>Background Image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>#header.hover</texture>
+    </control>
+    <control>
+      <description>Overlay Image FullScreen</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>black.png</texture>
+      <colordiffuse>90ffffff</colordiffuse>
+    </control>
+    <!-- TOP Header -->
+    <control>
+      <description>Overlay Image Title</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>90</height>
+      <texture>overlay_topbar.png</texture>
+      <colordiffuse>c9ffffff</colordiffuse>
+    </control>
+    <control>
+      <id>1</id>
+      <description>Top Title Background</description>
+      <type>image</type>
+      <posX>115</posX>
+      <posY>16</posY>
+      <width>655</width>
+      <height>52</height>
+      <texture>tvtitlebg.png</texture>
+      <animation effect="slide" start="-771,0" end="0,0" tween="quadratic" time="300" delay="0">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="-771,0" tween="quadratic" time="300" delay="0">WindowClose</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    <control>
+      <id>1</id>
+      <type>fadelabel</type>
+      <description>Top Title Label</description>
+      <posX>739</posX>
+      <posY>19</posY>
+      <width>525</width>
+      <font>mediastream12c</font>
+      <align>right</align>
+      <visible>yes</visible>
+      <label>#header.label</label>
+      <animation effect="slide" start="-771,0" end="0,0" tween="quadratic" time="300" delay="0">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="-771,0" tween="quadratic" time="300" delay="0">WindowClose</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    <import>common.time.xml</import>
+    <!--Last layer Controls-->
+    <control>
+      <description>background large (paused)</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>784</posY>
+      <width>1920</width>
+      <height>295</height>
+      <texture>osdbackground1.png</texture>
+    </control>
+    <control>
+      <description>TV Logo border</description>
+      <type>image</type>
+      <posX>9</posX>
+      <posY>720</posY>
+      <width>255</width>
+      <height>255</height>
+      <texture>imagebg.png</texture>
+      <centered>yes</centered>
+      <keepaspectratio>yes</keepaspectratio>
+    </control>
+    <control>
+      <description>TV Logo background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>24</posX>
+      <posY>735</posY>
+      <width>225</width>
+      <height>225</height>
+      <texture>logo_BG.png</texture>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+    </control>
+    <control>
+      <description>TV Logo</description>
+      <type>image</type>
+      <id>37</id>
+      <posX>24</posX>
+      <posY>735</posY>
+      <width>225</width>
+      <height>225</height>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+    </control>
+    <control>
+      <description>video window</description>
+      <type>videowindow</type>
+      <id>99</id>
+      <posX>12</posX>
+      <posY>90</posY>
+      <width>1152</width>
+      <height>648</height>
+      <textureFocus>tv_blue_border.png</textureFocus>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <keepaspectratio>yes</keepaspectratio>
+    </control>
+    <control>
+      <description>Show - Movies Pickup List</description>
+      <type>listcontrol</type>
+      <id>873008</id>
+      <posX>1281</posX>
+      <posY>90</posY>
+      <width>620</width>
+      <height>720</height>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+    <control>
+      <description>Channel Name</description>
+      <id>14</id>
+      <type>label</type>
+      <width>1350</width>
+      <height>37</height>
+      <posX>292</posX>
+      <posY>802</posY>
+      <font>mediastream16tc</font>
+    </control>
+    <control>
+      <description>On tv NOW</description>
+      <id>36</id>
+      <type>textbox</type>
+      <width>1350</width>
+      <height>37</height>
+      <posX>292</posX>
+      <posY>844</posY>
+      <font>mediastream14tc</font>
+      <textcolor>ff888888</textcolor>
+    </control>
+    <control>
+      <description>Plot</description>
+      <type>textboxscrollup</type>
+      <id>38</id>
+      <posX>345</posX>
+      <posY>885</posY>
+      <width>1230</width>
+      <height>88</height>
+      <seperator>__________________________________________________________________________________________________________________________________________________________________________________________</seperator>
+      <font>mediastream12</font>
+    </control>
+  </controls>
+</window>
+<!--Checksum:d675e8ac740469ac24ef3c73b2cce525-->

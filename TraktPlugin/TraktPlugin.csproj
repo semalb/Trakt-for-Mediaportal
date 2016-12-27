@@ -760,6 +760,8 @@
     <Content Include="Resources\Skins\Default\Trakt.WatchList.Shows.xml" />
     <Content Include="Resources\Skins\Default\Trakt.WatchList.xml" />
     <Content Include="Resources\Skins\Default\Trakt.xml" />
+    <Content Include="Resources\Skins\StreamedMP\Trakt.ShowSelectDialog.xml" />
+    <Content Include="Resources\Skins\StreamedMP\Trakt.ShowSelectGUI.xml" />
     <Content Include="Resources\Skins\Titan\DialogMultiSelect.xml" />
     <Content Include="Resources\Skins\Titan\Media\basichome_button_trakt.png" />
     <Content Include="Resources\Skins\Titan\Media\defaultTraktEpisode.png" />
