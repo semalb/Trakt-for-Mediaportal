@@ -908,6 +908,16 @@ namespace TraktPlugin.GUI
         public static string SettingTmdbEpisodeImageMaxCacheAgeDescription = "Number of days to cache TV Episode image requests";
         public static string SettingTmdbPersonImageMaxCacheAgeName = "Person Image Request Age";
         public static string SettingTmdbPersonImageMaxCacheAgeDescription = "Number of days to cache Person image requests";
+        //Alberto83 Added
+        public static string SettingEnableLocalizedEPGSearchName = "Localized EPG Lookup";
+        public static string SettingEnableLocalizedEPGSearchDescription = "Enable EPG search on Trakt for translated show and movie titles";
+        public static string SettingAllowPopUPOnSuccessfulScrobblingName = "Notify Successful Scrobbling";
+        public static string SettingAllowPopUPOnSuccessfulScrobblingDescription = "Notifies Successful scrobbling with a 3 sec notification";
+        public static string SettingGUIAsDialogName = "Use Dialogs for EPG Lookup";
+        public static string SettingGUIAsDialogDescription = "Uses pop up dialogs for manual show selections instead of the full GUI";
+        public static string SettingETVScrobbleDelayName = "Scrobble Delay for ETV";
+        public static string SettingETVScrobbleDelayDescription = "Set scrobble delay (in seconds) for ETV. Useful for Zapping.";
+        //----
         public static string StartYear = "Start Year: {0}";
         public static string SortBy = "Sort By: {0}";
         public static string SortSeasonsAscending = "Sort Seasons in Ascending order";

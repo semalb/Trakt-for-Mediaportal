@@ -21,6 +21,9 @@ namespace TraktPlugin.TraktAPI.DataStructures
         [DataMember(Name = "show")]
         public TraktShowSummary Show { get; set; }
 
+        [DataMember(Name = "season")]
+        public TraktSeasonSummary Season { get; set; }
+
         [DataMember(Name = "episode")]
         public TraktEpisodeSummary Episode { get; set; }
 

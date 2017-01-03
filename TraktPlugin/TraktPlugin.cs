@@ -378,9 +378,21 @@ namespace TraktPlugin
             #region My TV Live
             try
             {
+                //bool handlerExists = TraktHandlers.Exists(p => p.Name == "My TV Live");
+                //if (!handlerExists && TraktSettings.MyTVLive != -1)
+                //    TraktHandlers.Add(new MyTVLive(TraktSettings.MyTVLive));
+                //else if (handlerExists && TraktSettings.MyTVRecordings == -1)
+                //    TraktHandlers.RemoveAll(p => p.Name == "My TV Live");
                 bool handlerExists = TraktHandlers.Exists(p => p.Name == "My TV Live");
-                if (!handlerExists && TraktSettings.MyTVLive != -1)
+                if (!handlerExists && TraktSettings.MyTVLive != -1 && !TraktSettings.EnableLocalizedEPGSearch)
+                {
                     TraktHandlers.Add(new MyTVLive(TraktSettings.MyTVLive));
+                }
+                if (!handlerExists && TraktSettings.MyTVLive != -1 && TraktSettings.EnableLocalizedEPGSearch)
+                {
+                    TraktHandlers.Add(new MyETVLive(TraktSettings.MyTVLive));
+                    EPGCache.loadCache();
+                }
                 else if (handlerExists && TraktSettings.MyTVRecordings == -1)
                     TraktHandlers.RemoveAll(p => p.Name == "My TV Live");
             }

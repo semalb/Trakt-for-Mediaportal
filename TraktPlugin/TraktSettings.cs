@@ -203,6 +203,11 @@ namespace TraktPlugin
         public static int TmdbEpisodeImageMaxCacheAge { get; set; }
         public static int TmdbPersonImageMaxCacheAge { get; set; }
         public static string TmdbPreferredImageLanguage { get; set; }
+        //Alberto83 new settings added for EPG Localization
+        public static bool EnableLocalizedEPGSearch { get; set; }
+        public static bool AllowPopUPOnSuccessfulScrobbling { get; set; }
+        public static bool GUIAsDialog { get; set; }
+        public static int ETVScrobbleDelay { get; set; }
         #endregion
 
         #region Constants
@@ -399,8 +404,13 @@ namespace TraktPlugin
         private const string cTmdbEpisodeImageMaxCacheAge = "TmdbEpisodeImageMaxCacheAge";
         private const string cTmdbPersonImageMaxCacheAge = "TmdbPersonImageMaxCacheAge";
         private const string cTmdbPreferredImageLanguage = "TmdbPreferredImageLanguage";
+        //Alberto83 Added new constants
+        private const string cEnableLocalizedEPGSearch = "EnableLocalizedEPGSearch";
+        private const string cAllowPopUPOnSuccessfulScrobbling = "AllowPopUPOnSuccessfulScrobbling";
+        private const string cGUIAsDialog = "GUIAsDialog";
+        private const string cETVScrobbleDelay = "ETVScrobbleDelay";
         #endregion
-        
+
         #region Properties
 
         public static string Username
@@ -838,6 +848,11 @@ namespace TraktPlugin
                 TmdbEpisodeImageMaxCacheAge = GetValueAsIntAndValidate(cTrakt, cTmdbEpisodeImageMaxCacheAge, 30, 1, 365);
                 TmdbPersonImageMaxCacheAge = GetValueAsIntAndValidate(cTrakt, cTmdbPersonImageMaxCacheAge, 30, 1, 365);
                 TmdbPreferredImageLanguage = xmlreader.GetValueAsString(cTrakt, cTmdbPreferredImageLanguage, "en");
+                //Alberto83 Added new variables for MPExtension
+                EnableLocalizedEPGSearch = xmlreader.GetValueAsBool(cTrakt, cEnableLocalizedEPGSearch, false);
+                AllowPopUPOnSuccessfulScrobbling = xmlreader.GetValueAsBool(cTrakt, cAllowPopUPOnSuccessfulScrobbling, false);
+                GUIAsDialog = xmlreader.GetValueAsBool(cTrakt, cGUIAsDialog, false);
+                ETVScrobbleDelay = GetValueAsIntAndValidate(cTrakt, cETVScrobbleDelay,10,1,60);
             }
 
             // initialise API settings
@@ -1059,6 +1074,10 @@ namespace TraktPlugin
                 xmlwriter.SetValue(cTrakt, cTmdbEpisodeImageMaxCacheAge, TmdbEpisodeImageMaxCacheAge);
                 xmlwriter.SetValue(cTrakt, cTmdbPersonImageMaxCacheAge, TmdbPersonImageMaxCacheAge);
                 xmlwriter.SetValue(cTrakt, cTmdbPreferredImageLanguage, TmdbPreferredImageLanguage);
+                //Alberto83 added new variables
+                xmlwriter.SetValueAsBool(cTrakt, cEnableLocalizedEPGSearch, EnableLocalizedEPGSearch);
+                xmlwriter.SetValueAsBool(cTrakt, cAllowPopUPOnSuccessfulScrobbling, AllowPopUPOnSuccessfulScrobbling);
+                xmlwriter.SetValueAsBool(cTrakt, cGUIAsDialog, GUIAsDialog);
             }
 
             Settings.SaveCache();

@@ -179,6 +179,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\EPGCache.cs" />
     <Compile Include="Cache\TmdbCache.cs" />
     <Compile Include="Configuration\AddPathPopup.cs">
       <SubType>Form</SubType>
@@ -220,6 +221,7 @@
     <Compile Include="GUI\GUICreditsMovie.cs" />
     <Compile Include="GUI\GUICreditsShow.cs" />
     <Compile Include="GUI\GUIAnticipatedShows.cs" />
+    <Compile Include="GUI\GUIDialogShowSelect.cs" />
     <Compile Include="GUI\GUIListsMenu.cs" />
     <Compile Include="GUI\GUICommon.cs" />
     <Compile Include="GUI\GUIDialogMultiSelect.cs" />
@@ -262,6 +264,7 @@
     <Compile Include="GUI\GUIShowSeasons.cs" />
     <Compile Include="GUI\GUIRecentWatchedEpisodes.cs" />
     <Compile Include="GUI\GUIRecentWatchedMovies.cs" />
+    <Compile Include="GUI\GUIShowSelectGUI.cs" />
     <Compile Include="GUI\GUITVMenu.cs" />
     <Compile Include="GUI\GUIUserProfile.cs" />
     <Compile Include="GUI\GUIWatchListEpisodes.cs" />
@@ -298,6 +301,7 @@
     <Compile Include="TraktAPI\DataStructures\TraktComments.cs" />
     <Compile Include="TraktAPI\DataStructures\TraktCredits.cs" />
     <Compile Include="TraktAPI\DataStructures\TraktCrew.cs" />
+    <Compile Include="TraktAPI\DataStructures\TraktEPGCacheRecord.cs" />
     <Compile Include="TraktAPI\DataStructures\TraktEpisode.cs" />
     <Compile Include="TraktAPI\DataStructures\TraktEpisodeCollected.cs" />
     <Compile Include="TraktAPI\DataStructures\TraktEpisodeHistory.cs" />
@@ -425,6 +429,8 @@
     <Compile Include="TraktGenres.cs" />
     <Compile Include="TraktHandlers\ArgusRecordings.cs" />
     <Compile Include="TraktHandlers\ArgusTVLive.cs" />
+    <Compile Include="TraktHandlers\EbasicHandler.cs" />
+    <Compile Include="TraktHandlers\MyETVLive.cs" />
     <Compile Include="TraktHandlers\MyFilms.cs" />
     <Compile Include="TraktHandlers\MyTVLive.cs" />
     <Compile Include="TraktHandlers\MyTVRecordings.cs" />

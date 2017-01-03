@@ -1120,6 +1120,18 @@ namespace TraktPlugin.TraktAPI
             return results;
         }
 
+        //Alberto83
+        /// <summary>
+        /// Returns a list of shows or movies found against a title
+        /// </summary>
+        public static IEnumerable<TraktSearchResult> SearchByName(string searchTerm, string type = "movie,show", string fields = "title,translations,aliases")
+        {
+            //TraktLogger.Info("Search query: {0}", string.Format(TraktURIs.SearchByName, type, HttpUtility.UrlEncode(searchTerm), fields));
+            //string response = GetFromTrakt(string.Format(TraktURIs.SearchByName, HttpUtility.UrlEncode(searchTerm),type,fields));
+            string response = GetFromTrakt(string.Format(TraktURIs.SearchByName, type, HttpUtility.UrlEncode(searchTerm), fields));
+            return response.FromJSONArray<TraktSearchResult>();
+        }
+
         /// <summary>
         /// Returns a list of users found using search term
         /// </summary>

@@ -96,6 +96,12 @@ namespace TraktPlugin.TraktAPI
         public const string SearchUsers = "https://api-v2launch.trakt.tv/search?query={0}&type=user&page={1}&limit={2}?extended=full";
         public const string SearchLists = "https://api-v2launch.trakt.tv/search?query={0}&type=list&page={1}&limit={2}?extended=full";
         public const string SearchById = "https://api-v2launch.trakt.tv/search?id_type={0}&id={1}";
+        
+        //Added for epg handler
+       // public const string SearchMovieByName = "https://api-v2launch.trakt.tv/search?query={0}&type=movie";
+       // public const string SearchShowByName = "https://api-v2launch.trakt.tv/search?query={0}&type=show";
+        //public const string SearchByName = "https://api-v2launch.trakt.tv/search?query={0}&type={1}&fields={2}";
+        public const string SearchByName = "https://api-v2launch.trakt.tv/search/{0}?query={1}&fields={2}"; //this is final
 
         public const string NetworkFriends = "https://api-v2launch.trakt.tv/users/{0}/friends?extended=full,images";
         public const string NetworkFollowers = "https://api-v2launch.trakt.tv/users/{0}/followers?extended=full,images";
