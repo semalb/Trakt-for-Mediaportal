@@ -113,7 +113,7 @@ namespace TraktPlugin.TraktHandlers
                             //The new program has changed. I should check if the active window is GUIShowSelect and eventually close it.
                             if (GUIWindowManager.ActiveWindow.Equals((int)TraktGUIWindows.EPGShowSelect))
                             {
-                                GUIWindowManager.CloseCurrentWindow();
+                                GUIShowSelectGUI.exitGUI();
                             }
                             if (IsProgramWatched(EbasicHandler.getCurrentProgram()) && EbasicHandler.IsCurrentProgramScrobbling())
                             {

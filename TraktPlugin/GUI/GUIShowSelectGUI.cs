@@ -273,7 +273,7 @@ namespace TraktPlugin.GUI
         /// If the GUI started with the video FULLSCREEN it replaced the fullscreen window. We have to handle that gracefully.
         /// This method does that for you.
         /// </summary>
-        private void exitGUI()
+        public static void exitGUI()
         {
             if (wasFullScreenVideo && GUIGraphicsContext.IsPlayingVideo)
             {
