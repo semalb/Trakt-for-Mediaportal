@@ -137,9 +137,7 @@ namespace TraktPlugin.TraktHandlers
                             TVJustTurnedOn = false;
                             //Starts the scrobble of the new program because it changed
                             //cache should search here because some shows have no name and could be in cache.
-                        
-                        
-                            //response.Code = 0;
+
                             #region CACHE CHECK and SCROBBLE from CACHE
                             if (EPGCache.searchOnCache(videoInfo.Title, out item))
                             {
