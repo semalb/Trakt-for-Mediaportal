@@ -63,6 +63,7 @@ namespace TraktPlugin.TraktHandlers
         public bool Scrobble(string filename)
         {
             StopScrobble();
+            istStoppingScrobble = false;
 
             if (!g_Player.IsTV) return false;
 
