@@ -6,8 +6,8 @@
   <define>#header.label:"Choose Current Program"</define>
   <define>#header.hover:hover_trakt.png</define>
   <controls>
-    <!-- BACKGROUND -->
-    <control>
+<!-- BACKGROUND -->
+   <control>
       <description>Background Image</description>
       <type>image</type>
       <id>1</id>
@@ -28,7 +28,6 @@
       <texture>black.png</texture>
       <colordiffuse>90ffffff</colordiffuse>
     </control>
-    <!-- TOP Header -->
     <control>
       <description>Overlay Image Title</description>
       <type>image</type>
@@ -40,6 +39,7 @@
       <texture>overlay_topbar.png</texture>
       <colordiffuse>c9ffffff</colordiffuse>
     </control>
+<!-- TOP Header -->
     <control>
       <id>1</id>
       <description>Top Title Background</description>
@@ -69,7 +69,6 @@
       <animation effect="fade" time="150">WindowClose</animation>
     </control>
     <import>common.time.xml</import>
-    <!--Last layer Controls-->
     <control>
       <description>background large (paused)</description>
       <type>image</type>
@@ -111,15 +110,29 @@
       <posY>735</posY>
       <width>225</width>
       <height>225</height>
+      <!--<texture>#TV.View.thumb</texture>-->
       <keepaspectratio>yes</keepaspectratio>
       <centered>yes</centered>
     </control>
+<!--    <control>
+      <description>TV Player Border</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1280</width>
+      <height>720</height>
+      <texture>TV_Border_Select.png</texture>
+      <keepaspectratio>yes</keepaspectratio>
+    </control>-->
     <control>
       <description>video window</description>
       <type>videowindow</type>
       <id>99</id>
       <posX>12</posX>
       <posY>90</posY>
+<!--  <width>1255</width>
+      <height>696</height>-->
       <width>1152</width>
       <height>648</height>
       <textureFocus>tv_blue_border.png</textureFocus>

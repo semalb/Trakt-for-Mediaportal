@@ -403,7 +403,6 @@
         type="int"
         minvalue="1"
         maxvalue="60"
-        displaylistvalues="#Trakt.Translation.Yes.Label|#Trakt.Translation.No.Label"
         description="#Trakt.Translation.SettingETVScrobbleDelayDescription.Label"
         configfile="MediaPortal.xml" />
   </settings>
